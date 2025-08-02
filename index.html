@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Amazing Friends - Friendship Day 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #667eea 100%);
+            min-height: 100vh;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 24px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+        }
+        
+        .intro {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+        }
+        
+        .friends-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .friend-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .friend-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+        
+        .friend-card:hover::before {
+            transform: translateX(100%);
+        }
+        
+        .friend-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .friend-name {
+            font-size: 1.9rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+        
+        .friend-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+            text-align: center;
+            font-weight: 300;
+        }
+        
+        .special-card {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+
+        
+        .gratitude {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 35px;
+            border-radius: 20px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            font-weight: 300;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .friends-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌟 My Amazing Friends 🌟</h1>
+            <p class="subtitle">Friendship Day 2025 - A Tribute to My Family</p>
+        </header>
+        
+        <div class="intro">
+            Back in 2024, I made the greatest decision of my life - changing to this school. Little did I know that this choice would lead me to the most incredible friends I've ever had. These aren't just friends; they are my family. Without them, school days would be plain, lifeless, and boring. As we celebrate Friendship Day 2025, here's to the people who have made my journey unforgettable...
+        </div>
+        
+        <div class="friends-grid">
+            <div class="friend-card">
+                <h2 class="friend-name">Tabassum 🎬</h2>
+                <p class="friend-description">
+                    The youngest one in our group and our amazing video editor! She has the closest contacts in school and keeps us all connected. Tabassum brings creativity and youthful energy to everything we do. She's the one who captures our memories and turns them into beautiful stories.
+                </p>
+            </div>
+            
+
+            
+            <div class="friend-card">
+                <h2 class="friend-name">Deepanjana 😄</h2>
+                <p class="friend-description">
+                    The sunshine of our group! Deepanjana is the one who makes every situation light and stress-free. No matter how tough things get, she has this magical ability to bring smiles and laughter. Her positive energy is contagious and keeps our spirits high.
+                </p>
+            </div>
+            
+            <div class="friend-card">
+                <h2 class="friend-name">Promit 🎵⚡</h2>
+                <p class="friend-description">
+                    Part of our amazing trio! Promit is our electrical genius who knows all about circuits and wires. But that's not all - he's also musically talented just like me. We share a love for music that creates a special bond between us. He's the perfect blend of technical skills and artistic passion.
+                </p>
+            </div>
+            
+            <div class="friend-card">
+                <h2 class="friend-name">Dr. Rajdeep 👨‍⚕️🎵</h2>
+                <p class="friend-description">
+                    We call him "Doctor Rajdeep" for a reason! He's the one who knows every solution to every medical problem anyone could have. Whether it's a headache, a sports injury, or just general health advice, Rajdeep is our go-to medical expert. But there's more to him - he loves singing just like Promit and me! The three of us have sung together, creating beautiful harmonies and musical memories. Having him around makes us all feel safer, cared for, and entertained with his amazing voice.
+                </p>
+            </div>
+            
+            <div class="friend-card special-card">
+                <h2 class="friend-name">Me - The Software Guy 💻</h2>
+                <p class="friend-description">
+                    The software guy who somehow ended up doing commerce! I'm part of the trio with Promit and Rajdeep. While I navigate the world of code and technology, I've also ventured into commerce. Music connects Promit and me, and together with Rajdeep, we make an unstoppable team.
+                </p>
+            </div>
+        </div>
+        
+
+        <div class="gratitude">
+            <strong>I am incredibly thankful to have each of you in my life and my journey in every aspect. You've made school not just bearable, but enjoyable and memorable. I will never be able to thank you enough for being my friends, my family, my support system. Here's to many more years of friendship, laughter, and unforgettable memories together! 💙</strong>
+        </div>
+    </div>
+    
+    <script>
+        // No additional functionality needed
+    </script>
+</body>
+</html>
